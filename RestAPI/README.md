@@ -68,3 +68,11 @@ with this project. It's also possible to interact with it directly using the CLI
    ```
    $ uv run pytest
    ```
+
+
+## Getting the RestAPI Data.
+
+  host = 'https://earthquake.usgs.gov',
+  port = 443,
+  base_path = '/earthquakes/feed/v1.0/',
+  bearer_token = 'na'
