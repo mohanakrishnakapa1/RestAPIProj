@@ -76,3 +76,22 @@ with this project. It's also possible to interact with it directly using the CLI
   port = 443,
   base_path = '/earthquakes/feed/v1.0/',
   bearer_token = 'na'
+
+
+
+  ***************************** Variable Declaration in databricks.yml file ************************
+
+  # Variable declarations. These variables are assigned in the dev/prod targets below.
+variables:
+  catalog:
+    description: The catalog to use
+  schema:
+    description: The schema to use
+
+
+Declaration in Pipeline or Job YAML files
+
+   configuration:
+        catalog_name: ${var.catalog}
+
+
