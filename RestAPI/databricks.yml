@@ -19,6 +19,8 @@ variables:
     description: The catalog to use
   schema:
     description: The schema to use
+  warehouse_id:
+    description: WarehouseID
 
 targets:
   dev:
@@ -31,8 +33,9 @@ targets:
     workspace:
       host: http://127.0.0.1:7073
     variables:
-      catalog: workspace
-      schema: ${workspace.current_user.short_name}
+      catalog: restapiproj
+      schema: bronze
+      warehouse_id: ef1eec6de63bf039
   prod:
     mode: production
     workspace:
@@ -41,7 +44,8 @@ targets:
       root_path: /Workspace/Users/mohankapa@outlook.com/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: workspace
-      schema: prod
+      schema: silver
+      warehouse_id: ef1eec6de63bf039
     permissions:
       - user_name: mohankapa@outlook.com
         level: CAN_MANAGE
